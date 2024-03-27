@@ -9,11 +9,14 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 public class Registration {
     WebDriver driver=null;
 
     @Before
     public void setUp()  {
+        System.setProperty("webdriver.edge.driver","C:\\Users\\a911612\\Downloads\\edgedriver_win64");
         driver = new EdgeDriver();
         driver.manage().window().maximize();
     }

@@ -2,6 +2,7 @@ package StepDefinition;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,12 +11,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
+
 public class Login {
 
     WebDriver driver=null;
 
     @Before
     public void setUp()  {
+        System.setProperty("webdriver.edge.driver","C:\\Users\\a911612\\Downloads\\edgedriver_win64");
         driver = new EdgeDriver();
         driver.manage().window().maximize();
     }
@@ -42,7 +45,7 @@ public class Login {
         passwords.sendKeys(password);
         Thread.sleep(5000);
     }
-    @When("clique sur le button login")
+    @And("clique sur le button login")
     public void clique_sur_le_button_login() {
         WebElement login=driver.findElement(By.xpath("//input[@name='login']"));
         login.click();
