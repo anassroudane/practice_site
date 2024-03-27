@@ -16,7 +16,7 @@ public class Registration {
 
     @Before
     public void setUp()  {
-        System.setProperty("webdriver.edge.driver","C:\\Users\\a911612\\Downloads\\edgedriver_win64");
+        System.setProperty("webdriver.edge.driver","C:\\Users\\a911612\\Downloads\\edgedriver_win64\\msedgedriver.exe");
         driver = new EdgeDriver();
         driver.manage().window().maximize();
     }
